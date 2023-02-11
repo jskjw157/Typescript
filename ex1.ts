@@ -112,13 +112,12 @@ const add3:Add3 = (a, b, c?: number) => {
 }
 
 type SuperPrint = {
-    <TypePlaceholder>(arr: TypePlaceholder[]): void
+    <T>(arr: T[]): T
 }
 
-const superPrint: SuperPrint = (arr) => {
-    arr.forEach(i => console.log(i))
-}
+const superPrint: SuperPrint = (arr) => arr[0]
 
 superPrint([1, 2, 3, 4])
 superPrint([true, false, true])
 superPrint(["a","b","c"])
+superPrint([1,2,true,false,"a","b","c"])
