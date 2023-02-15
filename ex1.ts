@@ -233,6 +233,13 @@ class Dict {
         return Object.keys(this.words).length;
     }
 }
+
+class Player {
+    constructor(
+        private firstName:string,
+        private secondName:string
+    ){}
+}
     
     
     
