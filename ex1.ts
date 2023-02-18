@@ -234,14 +234,30 @@ class Dict {
     }
 }
 
-class Player {
+// Class
+abstract class User{
     constructor(
         private firstName:string,
-        private secondName:string
+        private lastName:string,
+        private nickname:string
     ){}
+    abstract getNickname():string;
+    getFullName():string{
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+class Player2 extends User{
+    constructor(firstName:string, secondName:string, nickname:string){
+        super(firstName, secondName, nickname);
+    }
+    getNickname():string{
+        return this.getFullName();
+    }
+
 }
     
-    
+const jiwon2 = new Player2("nico", "las", "니꼬");    
+jiwon2.getFullName();
     
     
     
